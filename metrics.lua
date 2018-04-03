@@ -400,7 +400,7 @@ for i,scraper in ipairs(scrapers) do
 end
 
 if port then
-  server = assert(socket.bind("*", port))
+  server = assert(socket.bind("::", port))
 
   while 1 do
     client = server:accept()
